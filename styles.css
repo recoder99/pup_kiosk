@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+}
+.map-container {
+    position: relative;
+}
+
+.map-container > img {
+    height: 100vh;
+    object-fit: contain;
+}
+
+.map-container > svg {
+    position: absolute;
+    z-index: 3;
+}
+
+.map-info {
+    position: absolute;
+    width: 30rem;
+    height: 25rem;
+    padding: 1em;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    z-index: 3;
+    top: 0;
+    left: 60px;
+    text-align: center;
+    gap:2em;
+    border-radius: 2em;
+}
+
+.info-img-container {
+    width: 100%;
+    height: 50%;
+}
+
+.info-img-container > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+area :hover {
+    cursor: pointer;
+}
+
+svg {
+    pointer-events: none;
+}
+
+polygon {
+    fill: gray;
+    opacity: 30%;
+}
