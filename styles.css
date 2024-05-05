@@ -31,8 +31,6 @@ body {
     display: flex;
     flex-direction: column;
     z-index: 3;
-    top: 0;
-    left: 200px;
     text-align: center;
     gap:2em;
     border-radius: 2em;

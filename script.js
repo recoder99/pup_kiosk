@@ -7,6 +7,9 @@ var infoText = document.getElementById('info-text');
 
 var mousex, mousey;
 
+
+
+
 mapData = {
     "pup-oval": {
         "title": "PUP Oval",
@@ -153,7 +156,8 @@ mapData = {
 
 }
 
-for (const i in map) {
+
+for (let i = 0; i < map.length; i++) {
     if (map[i].name == "item") {
         break;
     }
@@ -162,9 +166,12 @@ for (const i in map) {
     })
 }
 
-document.querySelector('.map-container').addEventListener('mousemove', logMouse);
+// let mapContainer = document.querySelector('.map-container');
 
-var mapInfo = document.querySelector('.map-info');
+
+
+const mapInfo = document.querySelector('.map-info');
+
 
 
 
@@ -173,14 +180,16 @@ imgMap.onload = function () {
 }
 
 function logMouse(e){
-    mouseX = e.screenX;
-    mouseY = e.screenY;
+    mousex = e.pageX;
+    mousey = e.pageY;
     
 
-    console.log("Mouse X: " + mouseX);
-    console.log("Mouse Y: " + mouseY);
+    // console.log("Mouse X: " + mousex);
+    // console.log("Mouse Y: " + mousey);
+    mapInfo.style.top = mousex + 10;
+    mapInfo.style.left = mousey + 10;
 }
-
+document.addEventListener('mousemove', logMouse);
 
 function getInfo(map) {
     console.log(mapData[map.title]);
@@ -189,8 +198,8 @@ function getInfo(map) {
     infoPic.src = "img/" + x["img-src"];
     infoText.innerHTML = x["description"];
 
-    mapInfo.style.top = mouseX;
-    mapInfo.style.left = mouseY;
+    // mapInfo.style.top = mousex + 10;
+    // mapInfo.style.left = mousey + 10;
 }
 
 
