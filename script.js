@@ -59,7 +59,7 @@ mapData = {
     "visit-info-center": {
         "title": "Visitor Information Center",
         "description": "Part of PUP services that guides visitors in entering PUP",
-        "img-src": "No Image Found"
+        "img-src": "visit.png"
     },
     "gymnasium": {
         "title": "PUP Gymnasium",
@@ -161,16 +161,17 @@ for (let i = 0; i < map.length; i++) {
     if (map[i].name == "item") {
         break;
     }
-    map[i].addEventListener('click', function () {
+    map[i].addEventListener('mouseover', function () {
         getInfo(map[i]);
     })
+    map[i].addEventListener('mouseout', closeInfo);
 }
 
 // let mapContainer = document.querySelector('.map-container');
 
 
 
-const mapInfo = document.querySelector('.map-info');
+const mapInfo = document.querySelector('#map-info');
 
 
 
@@ -180,16 +181,36 @@ imgMap.onload = function () {
 }
 
 function logMouse(e){
-    mousex = e.pageX;
-    mousey = e.pageY;
-    
+    mousex = e.pageX + 10;
+    mousey = e.pageY + 10;
 
-    // console.log("Mouse X: " + mousex);
-    // console.log("Mouse Y: " + mousey);
-    mapInfo.style.top = mousex + 10;
-    mapInfo.style.left = mousey + 10;
+    offset = 96;
+
+    console.log("Mouse X: " + mousex);
+    console.log("Mouse Y: " + mousey);
+    console.log(mapInfo.clientHeight);
+
+
+
+    if (mousey > mapInfo.clientHeight + offset){
+        mapInfo.style.top = (mousey - mapInfo.clientHeight) + 'px';
+    }else {
+        mapInfo.style.top = mousey + 'px';
+    }
+
+    if (mousex > imgMap.clientWidth - mapInfo.clientWidth){
+        mapInfo.style.left = (mousex - mapInfo.clientWidth - 10) + 'px'
+    } else {
+        mapInfo.style.left = mousex + 'px';
+    }
 }
+
 document.addEventListener('mousemove', logMouse);
+imgMap.addEventListener('click', closeInfo);
+
+function closeInfo(){
+    mapInfo.className += " closed"; 
+}
 
 function getInfo(map) {
     console.log(mapData[map.title]);
@@ -197,6 +218,8 @@ function getInfo(map) {
     infoTitle.innerHTML = x["title"];
     infoPic.src = "img/" + x["img-src"];
     infoText.innerHTML = x["description"];
+
+    mapInfo.className = "map-info";
 
     // mapInfo.style.top = mousex + 10;
     // mapInfo.style.left = mousey + 10;
