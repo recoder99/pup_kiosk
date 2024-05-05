@@ -35,6 +35,86 @@ mapData = {
         "title": "Apolinario Mabini Shrine",
         "description": "a historic site in Santa Mesa, Manila, Philippines. It is noted for being the residence of Filipino military leader Apolinario Mabini who figured in the Philippine Revolution.",
         "img-src": "mabini.jpg"
+    },
+    "nutri-bldg": {
+        "title": "Nutrition and Food Science Building",
+        "description": "It houses the students of PUP related to studies involving food nutrition and sciences",
+        "img-src": "nutri.png"
+    },
+    "tennis-court":{
+        "title": "PUP Tennis Court",
+        "description": "A well integrated tennis court for the students of PUP playing tennis",
+        "img-src": "tennis.jpg"
+    },
+    "basketball-court":{
+        "title": "PUP Basketball Court",
+        "description": "A well integrated tennis court for the students of PUP playing basketball",
+        "img-src": "bball.jpg"
+    },
+    "visit-info-center":{
+        "title": "Visitor Information Center",
+        "description": "Part of PUP services that guides visitors in entering PUP",
+        "img-src":  "No Image Found"
+    },
+    "gymnasium":{
+        "title": "PUP Gymnasium",
+        "description": "A well integrated gymansium used for sports, events, and special occassions",
+        "img-src": "gym1.jpg"
+    },
+    "swimming-pool":{
+        "title":"Swimming Pool",
+        "description": "An olympic-sized swimming pool that is capable of handling several swimming classes and student athlete activities simultaneously.",
+        "img-src": "pool1.jpg"
+    },
+    "obelisk":{
+        "title": "PUP Obelisk",
+        "description": "It is one of the murals of PUP which symbolizes as an emblem of strength and greatness that only time can change.",
+        "img-src": "obelisk.jpg"
+    },
+    "pylon": {
+        "title": "PUP Pylon",
+        "description": "It is the main symbol mural of PUP which symbolizes truth, excellence, and wisdom.",
+        "img-src": "pylon2022.jpg"
+    },
+    "freedom-park": {
+        "title": "Freedom Park",
+        "description": "It is one of the famous spots in PUP used to hold flag ceremonies.",
+        "img-src": "freedom.jpg"
+    },
+    "maintainance-bldg": {
+        "title": "Campus Development and Maintainance Building",
+        "description": "Located near East and South wing of main building.",
+        "img-src": "No Image found"
+    },
+    "alumni": {
+        "title": "Tahanan ng Alumni",
+        "description": "It is created with the goal of serving graduate students of Sintang Paaralan",
+        "img-src": "alumni.jpg"
+    },
+    "pe-bldg":{
+        "title": "PUP Physical Education Building",
+        "description": "A building that houses the PUP College of Human Kinestetics department",
+        "img-src": "pe.jpg"
+    },
+    "library": {
+        "title": "Ninoy Aquino Library and Learning Resources Center",
+        "description": "It is one of the largest library in Southeast Asia situated at PUP",
+        "img-src": "lib.jpg"
+    },
+    "ferry": {
+        "title": "PUP ferry station",
+        "description": "One of the ferry stations in Metro Manila Pasig River which gives direct station to the campus",
+        "img-src": "ferry.jpg"
+    },
+    "lagoon": {
+        "title": "PUP Lagoon",
+        "description": " It is a favorite place of the students to hang out during break time and students with no classes. It al also houses the PUP Ampitheater",
+        "img-src": "lagoon.jpg"
+    },
+    "charlie-del-rosario": {
+        "title": "Charlie Del Rosario Building",
+        "description": "One of the facilities in PUP Sta. Mesa which is named after Charlie Del Rosario who fought the Marcos Regime",
+        "img-src": "cdr.jpg"
     }
 
     
